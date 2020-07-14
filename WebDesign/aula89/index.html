@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .div1{
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            /*                eixo x | eixo y       */
+            transform: translate(110%, 100%);
+        }
+        .div2{
+            width: 150px;
+            height: 50px;
+            background-color: aqua;
+            position: relative;
+            /*o left é relativo(width) ao elemento pai*/
+            left: 50%;
+        }
+        .div3{
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+        .div3-interna{
+            background: yellow;
+            transform: translate(80%, 25px);
+           
+        }
+        .div4{
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+        .div4-interna{
+            position: relative;
+            top: 35px;
+            left: 50%;
+            background: yellow;
+            width: 150px;
+            transform: rotate(45deg);
+            text-indent: .5cm;
+        }
+        .div5{
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+        .div5-interna{
+            position: relative;
+            top: 35px;
+            left: 50%;
+            background: yellow;
+            width: 150px;
+            /*ponto de rotação*/
+            transform: rotate(90deg);
+            transform-origin: left top;
+            text-indent: .5cm;
+        }
+        .div6{
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+        .div6-interna{
+            background-color: yellowgreen;
+            /*no translate, o eixo x é relativo ao próprio elemento, porque a primeira propriedade "rotate" altera a orientação do elemento*/
+            transform: rotate(30deg) translate(100px);
+            text-align: center;
+        }
+        .div7{
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+        .div7-interna{
+            background-color: yellowgreen;
+            /*nesse caso o eixo x é relativo a tela do navegador, visto que a propriedade rotate é declarada depois*/
+            transform: translate(100px) rotate(30deg) ;
+            text-align: center;
+        }
+        .div8{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transform: skewX(10deg) skewY(50deg);
+        }
+        .div9{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transform: scaleX(2) scaleY(1.5) translateX(50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <hr>
+    <div class="div3">
+        <div class="div3-interna">conteúdo qualquer</div>
+        <p>Est amet non veniam sit dolore tempor reprehenderit dolore officia amet exercitation. Sunt in deserunt voluptate sunt nostrud dolor exercitation proident. Eu consequat eiusmod nisi anim elit cillum ut aliquip ullamco qui non voluptate pariatur. Enim ex tempor culpa exercitation exercitation. Commodo minim qui dolor mollit eu quis voluptate ullamco aute et quis qui dolore sunt. Esse velit culpa veniam nulla veniam.</p>
+    </div>
+    <hr>
+    <div class="div4">
+        <div class="div4-interna">conteúdo qualquer</div>
+        <p>Est amet non veniam sit dolore tempor reprehenderit dolore officia amet exercitation. Sunt in deserunt voluptate sunt nostrud dolor exercitation proident. Eu consequat eiusmod nisi anim elit cillum ut aliquip ullamco qui non voluptate pariatur. Enim ex tempor culpa exercitation exercitation. Commodo minim qui dolor mollit eu quis voluptate ullamco aute et quis qui dolore sunt. Esse velit culpa veniam nulla veniam.</p>
+    </div>
+    <hr>
+    <div class="div5">
+        <div class="div5-interna">conteúdo qualquer</div>
+        <p>Est amet non veniam sit dolore tempor reprehenderit dolore officia amet exercitation. Sunt in deserunt voluptate sunt nostrud dolor exercitation proident. Eu consequat eiusmod nisi anim elit cillum ut aliquip ullamco qui non voluptate pariatur. Enim ex tempor culpa exercitation exercitation. Commodo minim qui dolor mollit eu quis voluptate ullamco aute et quis qui dolore sunt. Esse velit culpa veniam nulla veniam.</p>
+    </div>
+    <hr>
+    <div class="div6">
+        <div class="div6-interna">conteúdo qualquer</div>
+        <p>Est amet non veniam sit dolore tempor reprehenderit dolore officia amet exercitation. Sunt in deserunt voluptate sunt nostrud dolor exercitation proident. Eu consequat eiusmod nisi anim elit cillum ut aliquip ullamco qui non voluptate pariatur. Enim ex tempor culpa exercitation exercitation. Commodo minim qui dolor mollit eu quis voluptate ullamco aute et quis qui dolore sunt. Esse velit culpa veniam nulla veniam.</p>
+    </div>
+    <hr>
+    <div class="div7">
+        <div class="div7-interna">conteúdo qualquer</div>
+        <p>Est amet non veniam sit dolore tempor reprehenderit dolore officia amet exercitation. Sunt in deserunt voluptate sunt nostrud dolor exercitation proident. Eu consequat eiusmod nisi anim elit cillum ut aliquip ullamco qui non voluptate pariatur. Enim ex tempor culpa exercitation exercitation. Commodo minim qui dolor mollit eu quis voluptate ullamco aute et quis qui dolore sunt. Esse velit culpa veniam nulla veniam.</p>
+    </div>
+    <hr>
+    <div class="div8">div8</div>
+    <div class="div9">div9</div>
+</body>
+</html>

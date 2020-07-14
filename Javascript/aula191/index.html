@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação com Javascript</title>
+</head>
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+    <button>Criar Tabuada</button>
+    <button>Limpar Tabuada</button>
+    <div id="output"></div>
+    <script>
+        let output = document.querySelector('#output');
+        let mensagem = '';
+
+        //  Button 1
+
+        let buttonOne = document.getElementsByTagName('button')[0];
+        
+        buttonOne.addEventListener("click", showTable);
+
+        function showTable(){
+            cleanTable();
+            // perguntar o número
+            let number = prompt(`Digite um número`);
+            // converter o número
+            number = parseFloat(number);
+            // criar uma variável que servirá de índice
+            let i = 1;
+            //  enquanto índice <= 100, concatena na variavel mensagem
+            while(i <= 1000){
+                mensagem += `${number} x ${i} = ${number*i} <br>`
+                i++;
+            }
+            //  mostra mensagem no output
+            output.innerHTML = mensagem;
+        }
+        
+        // Button 2
+
+        let buttonTwo = document.getElementsByTagName('button')[1];
+        
+        buttonTwo.addEventListener("click", cleanTable)
+
+        function cleanTable(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+
+        // Main
+
+    </script>
+</body>
+</html>

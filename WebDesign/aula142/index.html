@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        .gridItem {
+            background-color: orange;
+        }
+        
+        .gridContainer {
+            display: grid;
+            grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+            grid-template-rows: [header-start] 100px [header-end nav-start] 50px [nav-end main-start] 1fr [main-end footer-start] 50px [footer-end];
+            background-color: rgb(223, 223, 223);
+            grid-gap: 10px;
+            width: 90%;
+            margin: 30px auto;
+        }
+        
+        .header {
+            grid-column: col-start 1 / col-end 3;
+            grid-row: header;
+        }
+        
+        .nav {
+            grid-column: col-start 1 / col-end 3;
+            grid-row: nav;
+        }
+        
+        .aside {
+            grid-column: col-start 3 / col-end 3;
+            grid-row: main-start / main-end;
+        }
+        
+        .main {
+            grid-column: col-start 1 / col-end 2;
+            min-height: 200px;
+            grid-row: main-start / main-end;
+        }
+        
+        .footer {
+            grid-column: col-start 1 / col-end 3;
+            grid-row: footer-start / footer-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridContainer">
+        <header class="header gridItem">header</header>
+        <nav class="nav gridItem">nav</nav>
+        <aside class="aside gridItem">aside</aside>
+        <main class="main gridItem">
+            main
+        </main>
+        <footer class="footer gridItem">footer</footer>
+    </div>
+</body>
+
+</html>

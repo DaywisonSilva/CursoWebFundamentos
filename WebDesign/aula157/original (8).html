@@ -1,0 +1,87 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            body, html{
+                padding: 0;
+                margin: 0;
+            }
+            @keyframes slide{
+                0%{
+                    transform: translateY(0px);
+                }
+                30%{
+                    transform: translateY(-245px);
+                }
+                33%{
+                    transform: translateY(-245px);
+                }
+                63%{
+                    transform: translateY(-490px);
+                }
+                66%{
+                    transform: translateY(-490px);
+                }
+                96%{
+                    transform: translateY(-735px);
+                }
+                100%{
+                    transform: translateY(-735px);
+                }
+            }
+
+            #slide-externo{
+                border: 5px solid rgb(76, 76, 76);
+                width: 500px;
+                height: 250px;
+                box-sizing: border-box;
+                overflow-y: hidden;
+                margin: auto;
+            }
+            #slide-interno{
+                width: 100%;
+                animation: slide 8s ease-in-out infinite alternate;
+                /* animation-direction: ; */
+            }
+            #slide-interno img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                /* object-fit: contain; */
+            }
+            #slide-interno:hover{
+                animation-play-state: paused;
+            }
+            #two{
+                width: 100vw;
+                height: 30vh;
+                background-color: black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h2>Animation - slideshow</h2>
+        
+        <div id="slide-externo">
+            <div id="slide-interno">
+                <img src="imagens/slide1.jpg" alt="dog 1">
+                <img src="imagens/slide2.jpg" alt="dog 2">
+                <img src="imagens/slide3.jpg" alt="dog 3">
+                <img src="imagens/slide4.jpg" alt="dog 4">
+            </div>
+        </div>
+        <div id="two">
+
+        </div>
+        
+        
+    </body>
+</html>

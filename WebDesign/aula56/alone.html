@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+            /*O gradiente fica por cima e a imagem fica por baixo, caso a imagem fique por cima, o gradiente não irá aparecer*/
+            /*Os 500px define o seguinte: irá andar 50opx e começar o gradiente*/
+            background-image: linear-gradient(to left top, rgba(255, 0, 0, 0.74), transparent), linear-gradient(to left bottom,rgba(0, 0, 255, 0.664) 500px, transparent), url('../bg-1.jpg');
+            background-size: auto, cover;
+            background-position: right top;
+
+         
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

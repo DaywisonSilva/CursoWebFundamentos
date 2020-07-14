@@ -1,0 +1,35 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      .chk{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgb(99, 99, 99);
+        background-color: rgb(187, 187, 187);
+      }
+      input:checked + label > .chk:before{
+        content: '';
+        display: block;
+        width: 10px;
+        height: 15px;
+        position: relative;
+        border: 2px solid rgb(255, 255, 255);
+        transform: rotate(45deg);
+        box-sizing: border-box;
+        border-top-color: transparent;
+        border-left-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="chk">
+    <label for="chk">
+      <span class="chk"></span>
+      Li e aceito os termos
+    </label>
+  </body>
+</html>

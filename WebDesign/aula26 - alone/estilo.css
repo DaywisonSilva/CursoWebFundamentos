@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: trajan-pro;
+    src: url('trajan-pro.otf');
+}
+body, html{
+    background-color: gainsboro;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-family: trajan-pro;
+}
+#container{
+    height: 80%;
+}
+#plano{
+    background-image: url('imagens/bg-1.jpg');
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+    margin: auto;
+    height: 125%;
+}
+#plano h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin: 200px 0 80px 0;
+    font-family: Arial ;
+}
+div#container2{
+    text-align: center;
+}
+#plano h2{
+    text-align: center;
+    color: white;  
+    background-color: rgba(0, 0, 0, 0.503);
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+nav{
+    text-align: end;
+    
+}
+nav ul{
+    margin-right: 10px;
+}
+nav li{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.489);
+    color: white;
+    padding: 1%;
+    border: 1px white solid;
+    margin: 20px 10px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li:hover{
+    background-color: rgba(0, 0, 0, 0.653);
+    cursor: pointer;
+}
+main{
+    margin: auto;
+    width: 90%;
+}
+section{
+    margin-top: 20px;
+    width: 100%;
+    background-color: white;
+}
+section#one{
+    padding: 1%;
+    overflow: auto;
+}
+section#two{
+    padding: 10px;
+}
+div#ione{
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+div#itwo{
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+div#ithree{
+    float: left;
+    width: 32%;
+}
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(142, 142, 142);
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 4;
+}
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,179 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            /*O elemento pai que diz como ele deve distribuir na tela os elementos filhos*/
+            .flexbox{
+                height: 250px;
+                border: 1px solid red;
+                display: flex; /* Flex container */
+                margin-bottom: 15px;
+                
+            }
+            /* Flex Itens */
+            .flexbox div{
+                background: orange;
+                width: 300px;
+                margin: 15px;
+            }
+            .flexbox:nth-child(4){
+                /*flex-direction: row;
+                flex-wrap: wrap;*/
+                flex-flow: row wrap;
+            }
+            .flexbox:nth-child(5){
+                margin-top: 10px;
+                margin-bottom: 10px;
+                justify-content: space-between;
+                /* space-around pega o espaço que estava sobrando de distribui entre os elementos */
+                /* space-between coloca os espaços somente entre os elementos*/
+            }
+            .flexbox:nth-child(5) div{
+                width: 30px;
+            }
+            .flexbox:nth-child(5){
+                /*
+                    O align-items e o justify-content são propriedades que se aplicam a classe que faz referência ao elemento pai que é o flex-container
+                */
+                /*Alinha no eixo y*/
+                align-items: center;
+                /*Alinha no eixo x*/
+                justify-content: center;
+            }
+            .flexbox:nth-child(6) div:nth-child(2){
+                font-size: 4em;
+            }
+
+            .flexbox:nth-child(6){
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+            }
+            .flexbox:nth-child(6) div{
+                width: 30px;
+            }
+
+            .flexbox:nth-child(7){
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                /* O align-content considera um grupo de elementos e é necessário ter mais de uma linha para funcionar, ou seja, aplicar a propriedade flex-wrap: wrap;*/
+                align-content: flex-end;
+                
+            }
+            .flexbox:nth-child(7) div{
+                width: 100px;
+            }
+
+            .flexbox:nth-child(8){
+                justify-content: center;
+                align-items: center;
+            }
+            .flexbox:nth-child(8) div{
+                background-color: yellow;
+                flex-basis: 50px;
+                height: 50px;
+            }
+            
+            .flexbox:nth-child(9){
+                justify-content: center;
+                align-items: center;
+            }
+            .flexbox:nth-child(9) div{
+                background-color: yellow;
+                flex-basis: 50px;
+                height: 50px;
+            }
+            .flexbox:nth-child(9) div:nth-child(2){
+                /*Pega os espaços da lateral que estão sobrando e divide entre os elementos*/
+                flex-grow: 2;
+            }
+            .flexbox:nth-child(9) div:nth-child(4){
+                flex-grow: 1;
+            }
+
+            .flexbox:nth-child(10){
+                justify-content: center;
+                align-items: center;
+            }
+            .flexbox:nth-child(10) div{
+                background-color: yellow;
+                flex-basis: 300px;
+                height: 50px;
+            }
+            .flexbox:nth-child(10) div:nth-child(2){
+                /*Trata da relação de proporção entre o espaço do flex-container, ou seja, quanto maior o valor, menos espaço o elemento terá*/
+                /* flex-shrink: 1; */
+            }
+            .flexbox:nth-child(10) div:nth-child(4){
+                /*Ordem: grow shrink basis*/
+                flex: 0 0 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Display Flex</h2>
+        <p>Acomodar ou distribuir elementos de modo fácil</p>
+        <p>Ajuda a centralizar na vertical</p>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daywison">
+    <meta name="desciption" content="Formulário de Login">
+    <meta name="keywords" content="formulário, login, senha"> 
+    <title>Formulário</title>
+    <style>
+        .formLogin{
+            width: 250px;
+            margin: 50px auto;
+        }
+        #user, #pass, .btn{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="#" method="POST" class="formLogin">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="user">Digite o seu usuário:</label>
+            <input type="text" id="user" name="user">
+            
+            <label for="pass">Digite a sua senha:</label>
+            <input type="password" id="pass" name="pass">
+            
+            <input type="submit" value="logar" class="btn">
+        </fieldset>
+    </form>
+</body>
+</html>

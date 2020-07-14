@@ -1,0 +1,13 @@
+.one{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 100px auto;
+    transition-property: width, height;
+    transition-duration: 1s, 3s;
+    transition-timing-function: cubic-bezier(0.3,-0.9,0.7,1.9);
+}
+.one:hover{    
+    width: 200px;
+    height: 200px;
+}

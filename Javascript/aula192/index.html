@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora com operações ariti
+    méticas simples, com o intuito de estudar lógica de programação com javascript">
+    <title>lógica de Programação</title>
+    <style>
+        body{
+            font-family: Roboto, sans-serif;
+        }
+        #button {
+            display: flex;
+            width: 250px;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            margin: 10%;
+            transform: scale(2);
+        }
+        #result{
+            font-size: 2em ;
+        }
+        @media (max-width: 600px){
+            h1{
+                text-align: center;
+            }
+            #result{
+                font-size: 2em ;
+                text-align: center;
+            }
+            #button{
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <div id="button">
+        <button id="soma">+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+    </div>
+    <div id="result">
+
+    </div>
+
+    <script>
+        let result = document.getElementById("result");
+        let number = window.prompt("Digite um número: ");
+        let value = 0;
+        number = Number(number);
+        result.innerHTML = `${number}`;
+
+        // PLUS
+
+        let buttonOne = document.getElementsByTagName("button")[0];
+        let cont = 0;
+        buttonOne.addEventListener("click", (event) => {
+            let numberTwo = window.prompt("Digite o valor da parcela que será somada: ");
+            numberTwo = Number(numberTwo)
+            if(cont == 0){
+                value = number + numberTwo;
+                result.innerHTML = `${value}`;
+            }else{
+                value = value + numberTwo;
+                result.innerHTML = `${value}`
+            }
+            cont++;     
+        });
+
+        // MINUS 
+
+        let buttonTwo = document.getElementsByTagName("button")[1];
+        buttonTwo.addEventListener("click", (event) => {
+            let numberTwo = window.prompt("Digite o valor do subtraendo: ");
+            numberTwo = Number(numberTwo)
+            if(cont == 0){
+                value = number - numberTwo;
+                result.innerHTML = `${value}`;
+            }else{
+                value = value - numberTwo;
+                result.innerHTML = `${value}`
+            }
+            cont++;     
+        });
+        
+        // TIMES
+        let buttonThree = document.getElementsByTagName("button")[2];
+        buttonThree.addEventListener("click", (event) => {
+            let numberTwo = window.prompt("Digite o valor do multiplicador: ");
+            numberTwo = Number(numberTwo)
+            if(cont == 0){
+                value = number * numberTwo;
+                result.innerHTML = `${value}`;
+            }else{
+                value = value * numberTwo;
+                result.innerHTML = `${value}`
+            }
+            cont++;     
+        });
+
+        // DIVISION
+        let buttonFour = document.getElementsByTagName("button")[3];
+        buttonFour.addEventListener("click", (event) => {
+            let numberTwo = window.prompt("Digite o valor do divisor: ");
+            numberTwo = Number(numberTwo)
+            if(cont == 0){
+                value = number / numberTwo;
+                result.innerHTML = `${value}`;
+            }else{
+                value = value / numberTwo;
+                result.innerHTML = `${value}`
+            }
+            cont++;     
+        });
+    </script>
+
+</body>
+
+</html>

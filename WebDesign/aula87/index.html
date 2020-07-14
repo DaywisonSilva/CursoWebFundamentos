@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*o nth-of-type seleciona um determinado elemento(tag) sem considerar os demais que fazem parte do DOM, OBS: Tenha cuidado quando for usar classes*/
+        div p:nth-of-type(4){
+            color: blue;
+        }
+        /*Seleciona todo elemento que estiver com a classe destaque*/
+        .destaque:nth-of-type(3){
+            background-color: aquamarine;
+        }
+        p:first-child{
+            color: gray;
+        }
+        p:last-child{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Meu parágrafo</p>
+        <p>Meu parágrafo</p>
+        <hr>
+        <p class="destaque">Meu parágrafo</p>
+        <p>Meu parágrafo</p>
+        <hr>
+        <p>Meu parágrafo</p>
+        <p>Meu parágrafo</p>
+        <hr>
+        <p>Meu parágrafo</p>
+        <p>Meu parágrafo</p>
+    </div>
+</body>
+</html>

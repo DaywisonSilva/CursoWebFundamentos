@@ -1,0 +1,11 @@
+body{
+    font-family: serif;
+    color: black;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+a::after{
+    content: "(" attr(href) ")";
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="author" content="Daywison">
+    <meta name="description" content="Um site para fim educacional, estudo sobre inputs">
+    <meta name="keywords" content="input, educação, programação, frontend">
+    <style>
+        label{
+            display: block;
+            margin-top: 15px;
+        }
+        .line{
+            display: inline;
+        }
+        .fieldTwo label{
+            display: inline;
+        }
+    </style>
+</head>
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Exemplo de formulário</h1>
+    <form action="" method="GET" class="formLogin" style="width: 40%; margin: auto;">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label>
+                Email
+                <input type="email" placeholder="digite seu email">
+            </label>
+            <label>
+                Número de filhos
+                <input type="number">
+            </label>
+            <label>
+                Nascimento
+                <input type="date" min="2000-01-01" max="2020-01-10">
+            </label>
+            <p>sexo:</p>
+            <label class="line">
+                <input type="radio" name="sexo" value="M" checked>
+                Masculino
+            </label>
+            <label class="line">
+                <input type="radio" name="sexo" value="F">
+                Feminino
+            </label>
+            <label>
+                Estado
+                <select name="" id="">
+                    <option value="#">Selecione</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset class="fieldTwo">
+            <legend>Área de Interesse</legend>
+            <label>
+                <input type="checkbox" name="html" value="html">
+                HTML
+            </label>
+            <label>
+                <input type="checkbox" name="CSS" value="CSS">
+                CSS
+            </label>
+            <label>
+                <input type="checkbox" name="js" value="js">
+                Javascript
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="" id="" cols="33" rows="10" style="resize: none;"></textarea>
+            <textarea name="" id="" cols="33" rows="10" style="resize: none;" readonly>Aqui entra o texto do contrato que precisa ser aceito</textarea>
+            <label>
+                <input type="checkbox">
+                Li e aceito
+            </label>
+            <input type="range" step="10">
+            <input type="color">
+        </fieldset>
+        <hr>
+        <input type="submit" value="Mandar">
+        <input type="reset" value="Limpar">
+        <input type="button" value="Botão">
+    </form>
+</body>
+</html>

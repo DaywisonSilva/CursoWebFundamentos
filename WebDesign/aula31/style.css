@@ -1,0 +1,18 @@
+#div1{
+    width: 200px;
+    height: 150px;
+    padding: 25px;
+    background-color: aquamarine;
+    margin: 4px;
+    /*O "box-sizing: border-box" preserva as dimensões delaradas no width e height, mantendo o padding*/
+    box-sizing: border-box;
+    border: 2px black solid;
+    text-align: center;
+}
+#div2{
+    width: 200px;
+    height: 150px;
+    padding: 25px;
+    background-color: aquamarine;
+    margin: 4px;
+}

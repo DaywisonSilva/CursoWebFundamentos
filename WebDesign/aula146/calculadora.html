@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daywison Silva">
+    <meta name="description" content="Calculadora feita com HTML, CSS e Javascript">
+    <meta name="keywords" content="Calculadora, HTML, CSS">
+    <title>Calculadora &nbsp;Front-End</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: aquamarine;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow-y: hidden;
+            font-size: 2em;
+            font-family: Helvetica, sans-serif;
+        }
+        
+        .calcContainer {
+            width: 90vw;
+            padding-top: 1em;
+            box-sizing: border-box;
+            margin: auto;
+            background-color: rgb(171, 171, 171);
+            display: grid;
+            grid-template-rows: repeat(6, [row-start] 1fr [row-end]);
+            grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+            height: 500px;
+           
+        }
+        
+        .resultado {
+            width: 90%;
+            margin: 0px auto 1em auto;
+            padding: 35px;
+            box-sizing: border-box;
+            background-color: aliceblue;
+            grid-row: row-start 1 / row-end 1;
+            grid-column: col-start 1 / col-end 4;
+            text-align: end;
+        }
+        .mais{
+            background-color: rgb(147, 147, 147);
+        }
+        .zero{
+            background-color: rgb(147, 147, 147);
+        }
+        button{
+            font-size: .7em;
+        }
+        button:nth-of-type(16){
+            grid-row: row-start 5 / row-end 6;
+            grid-column: col-start 4 / col-end 4;
+        }
+        button:nth-of-type(17){
+            /* grid-row: row-start 6 / row-end 6; */
+            grid-column: col-start 1 / col-end 2;
+        }
+        button:last-child{
+            font-size: 2em;
+        }
+
+        
+        @media (min-width: 700px) {
+            .calcContainer{
+                width: 60vw;
+                height: 700px;
+                transform: scale(1.4);    
+            }
+
+            button{
+                font-size: 1em;
+            }
+        }
+        @media (min-width: 1040px){
+            .calcContainer{
+                width: 45vw;
+                height: 750px;
+                transform: scale(.8);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="calcContainer">
+        <div class="resultado">Resultado</div>
+        <button onclick="AC()">AC</button>
+        <button onclick="porcentagem()" onclick="adVetorPorc()">%</button>
+        <button onclick="multiplicar()" onclick="adVetor()">X</button>
+        <button onclick="dividir()" onclick="adVetor()">/</button>
+        <button value="7" onclick="adVetor()">7</button>
+        <button value="8" onclick="adVetor()">8</button>
+        <button value="9" onclick="adVetor()">9</button>
+        <button onclick="resultado()" onclick="adVetor()">=</button>
+        <button value="4" onclick="adVetor()">4</button>
+        <button value="5" onclick="adVetor()">5</button>
+        <button value="6" onclick="adVetor()">6</button>
+        <button onclick="subtrair()" onclick="adVetor()">-</button>
+        <button value="1" onclick="adVetor()">1</button>
+        <button value="2" onclick="adVetor()">2</button>
+        <button value="3" onclick="adVetor()">3</button>
+        <button onclick="somar()" class="mais" onclick="adVetor()">+</button>
+        <button value="0" class="zero" onclick="adVetor()">0</button>
+        <button value="." onclick="adVetor()">.</button>
+    </div>
+
+
+</body>
+    <script>
+        var sete = document.getElementsByTagName("button")[4];
+        var oito = document.getElementsByTagName("button")[5];
+        var nove = document.getElementsByTagName("button")[6];
+        var quatro = document.getElementsByTagName("button")[8];
+        var cinco = document.getElementsByTagName("button")[9];
+        var seis = document.getElementsByTagName("button")[10];
+        var um = document.getElementsByTagName("button")[12];
+        var dois = document.getElementsByTagName("button")[13];
+        var tres = document.getElementsByTagName("button")[14];
+        
+    </script>
+</html>

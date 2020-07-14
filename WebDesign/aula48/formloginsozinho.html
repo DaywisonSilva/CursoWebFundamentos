@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Daywison">
+    <meta name="description" content="Formulário com semântica aprimorada">
+    <meta name="keywords" content="formulário, dados">  
+    <title>Document</title>
+    <style>
+        .form{
+            width: 30%;
+            margin: auto;
+            background-color: rgb(176, 231, 213);
+        }
+        #user, #pass, .bot{
+            display: block;
+            width: 80%;
+            box-sizing: border-box;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        #user, #pass{
+            background-color: rgb(236, 233, 233);
+        }
+        #user:focus, #pass:focus{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modelo de formulário</h1>
+    <form action="formlogin.html" class="form" method="POST">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="user">Digite o seu usuário:</label>
+            <input type="text" id="user" autofocus>
+            <label for="pass">Digite sua senha:</label>
+            <input type="password" id="pass">
+            <input type="submit" value="Logar" class="bot">
+        </fieldset>
+    </form>
+</body>
+</html>

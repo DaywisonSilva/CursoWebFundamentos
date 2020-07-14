@@ -1,0 +1,45 @@
+/*Descendência*/
+/*o espaço representa descendência*/
+div p{
+    color: rgb(0, 255, 8);
+}
+
+/*altera todo p que é filho direto da div que é filha de outra div*/
+div > p{
+    color: rgb(255, 0, 0);
+}
+
+/*Seleciona a div que vem imediatamente após um parágrafo || Irmão Adjacente*/
+div p + div{
+    color: green;
+}
+
+/*Só seleciona as div que vem depois de um parágrafo  ||Próximos irmãos*/
+div p ~ div{
+    color: aquamarine;
+}
+/*seletor por atributo*/
+a[title]{
+    color: blueviolet;
+}
+/*seletor de atributo-valor*/
+img[alt="dois"]{
+    width: 60%;
+}
+/*quero saber se o meu atributo inicia com determinado valor*/
+img[alt^="três"]{
+    width: 80%;
+}
+/*quero saber se o meu atributo termina com determinado valor*/
+img[src$=".png"]{
+    width: auto;
+}
+/*Seleciona todo parágrafo que não possui a classe destaque*/
+p:not(.destaque){
+    color: #000;
+}
+/*Seleciona toda imagem que não possui o atributo alt*/
+/*com o display:none é possível forçar o html a ter o atributo alt*/
+img:not([alt]){
+    display: none;
+}

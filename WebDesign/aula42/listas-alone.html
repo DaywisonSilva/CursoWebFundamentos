@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        li ul{
+            overflow: hidden;
+            height: 0px;
+            transition: height 0.5s;
+        }
+        li:hover{
+            background-color: gray;
+        }
+        li:hover ul{
+            overflow: visible;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>
+            Item 2
+            <ul>
+                <li>Item 2.1</li>
+                <li>Item 2.2</li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+    </ul>
+    
+    <hr>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hypertext Markup Language</dd>
+    </dl>
+    <dl>
+        <dt>CSS</dt>
+        <dd>Cascade Style Sheet</dd>
+    </dl>
+
+    <hr>
+
+    <dl>
+        <dt>www</dt>
+        <dt>internet</dt>
+        <dd>rede mundial de computadores</dd>
+    </dl>
+    <dl>
+        <dt>Javascript</dt>
+        <dd>linguagem script para internet</dd>
+        <dd>script para rodar no browser</dd>
+    </dl>
+</body>
+</html>

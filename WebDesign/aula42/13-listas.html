@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li ul{
+            overflow: hidden;
+            height: 0px;
+            transition: height 0.9s;
+        }
+        li:hover{
+            background-color: gray;
+        }
+        li:hover ul{
+            display: block;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!--Lista Aninhada-->
+    <ul>
+        <li>Lista 1</li>
+        <li>Lista 2
+            <ul>
+                <li>Lista 2</li>
+                <li>Lista 3</li>
+            </ul>
+        </li>  
+        <li>Lista 3</li>      
+    </ul>
+    <!--Lista de definição-->
+    <!--Primeiro caso: um termo para cada definição-->
+    <hr>
+    <dl>
+        <dt>HTML</dt><!--Definition Term-->
+        <dd>Linguagem de marcação de Hypertexto</dd><!--Definition Description-->
+        <dt>CSS</dt>
+        <dd>Linguagem para criação de folhas de estilo</dd>
+    </dl>
+    <!--Segundo caso: um termo para várias definições-->
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+    </dl>
+    <!--Terceiro caso: vários termos para uma definição-->
+    <dl>
+        <dt></dt>
+        <dt></dt>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+</body>
+</html>

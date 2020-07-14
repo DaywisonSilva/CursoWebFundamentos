@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /*essa propriedade vai fazer com que só a altura seja animada: "transition-property"*/
+            /*transition-property: width;
+            transition-duration: 1s;*/
+            transition-property: width, height;
+            transition-duration: .5s, 3s;
+            /*cubic-bezier(x1,y1,x2,y2)*/
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-delay: 0s, .8s;
+        }
+        div:hover{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>
